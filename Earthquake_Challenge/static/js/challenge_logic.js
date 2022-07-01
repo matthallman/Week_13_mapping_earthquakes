@@ -18,21 +18,21 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     }
     function getColor(magnitude) {
         if (magnitude > 5) {
-          return "#ea2c2c";
+          return "#4E0250";
         }
         if (magnitude > 4) {
-          return "#ea822c";
+          return "#801A86";
         }
         if (magnitude > 3) {
-          return "#ee9c00";
+          return "#645986";
         }
         if (magnitude > 2) {
-          return "#eecc00";
+          return "#58BC82";
         }
         if (magnitude > 1) {
-          return "#d4ee00";
+          return "#7AF1AC";
         }
-        return "#98ee00";
+        return "#7AF1AC";
       }
 
     function getRadius(magnitude) {
@@ -62,7 +62,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
 
         function styleStyle(lines) {
             return {
-            color: "#8F00FF",
+            color: "#C71585",
             weight: 3.0
         };
         
@@ -77,7 +77,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
                 opacity: 1,
                 fillOpacity: 1,
                 fillColor: getColor(feature.properties.mag),
-                color: "#000000",
+                color: "#4e0250",
                 radius: getRadius(feature.properties.mag),
                 stroke: true,
                 weight: 0.5
@@ -85,13 +85,13 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
             }
             function getColor(magnitude) {
                 if (magnitude > 6) {
-                return "#ea2c2c";
+                return "#4E0250";
                 }
                 if (magnitude > 5) {
-                return "#ea822c";
+                return "#4E0250";
                 }
                 if (magnitude < 5) {
-                return "#ee9c00";
+                return "#801A86";
                 }}
 
             function getRadius(magnitude) {
@@ -181,12 +181,12 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     var div = L.DomUtil.create('div', 'info legend');
     const magnitudes = [0,1,2,3,4,5];
     const colors = [
-        "#98ee00",
-        "#d4ee00",
-        "#eecc00",
-        "#ee9c00",
-        "#ea822c",
-        "#ea2c2c"
+        "#7AF1AC",
+        "#8FE388",
+        "#58BC82",
+        "#645986",
+        "#801A86",
+        "#4E0250",  
     ];
 
         // loop through our intervals and generate a label with a colored square for each interval
