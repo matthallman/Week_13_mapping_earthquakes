@@ -1,7 +1,7 @@
 // STEP 0: GET DATA
 
 // Add console.log to see if code is working
-console.log("Quake_data");
+console.log("QuakeData");
 
 // Load in the geoJSON data
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
